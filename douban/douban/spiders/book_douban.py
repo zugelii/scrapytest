@@ -12,6 +12,7 @@ class BookSpider(scrapy.Spider):
 		'http://book.douban.com/',
 	]
 	def parse(self, response):
+		print(response.body)
 		for book_url in response.xpath('//ul[@class="list-col list-col5 list-express slide-item"'):
 			book = BookItem()
 			book['name'] = book_url.xpath('./li/div[@class="infor"]/div[@class="title"]/a/text()').extract_first()

@@ -36,3 +36,4 @@ class DuplicatesPipline(object):
 		return item
 
 
+class 
